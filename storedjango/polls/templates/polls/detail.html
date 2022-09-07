@@ -1,3 +1,7 @@
+{% extends './base.html' %}
+
+{% block title %}Detail question{% endblock title %}
+{% block questions %}
 <form action="{% url 'polls:views' question.id %}" method="post">
   {% csrf_token %}
   <fieldset>
@@ -18,12 +22,5 @@
   </fieldset>
   <input type="submit" value="Vote">
 </form>
+{% endblock questions %}
 
-{% comment %}
-<h1>{{question.question_text}}</h1>
-<ul>
-  {% for choice in question.choice_set.all %}
-  <li>{{ choice.choice_text}}</li>
-  {% endfor %}
-</ul>
-{% endcomment %}
