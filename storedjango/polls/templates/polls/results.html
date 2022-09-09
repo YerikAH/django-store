@@ -1,24 +1,26 @@
-
-{% extends './base.html' %}
-
-{% block title %}Results{% endblock title %}
-{% block questions %}
-  <h2>{{ question.question_text}}</h2>
-  <ul>
-    {% for choice in question.choice_set.all %}
-      <li style="display: flex;justify-content: space-between;width: 320px;margin-top:1.5rem">
-        <p>
-          {{choice.choice_text}}
-        </p>
-        <p style="text-align: right;">
-          <b>
-            {{choice.votes}} vote{{choice.votes|pluralize }}
-          </b>
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
-  <li>
-    <a style="margin-top: 3rem;" href=" {% url 'polls:detail' question.id %}">¿Te gustario votar de nuevo?</a>
+{% extends './base.html' %} {% block title %}Results{% endblock title %} {%
+block questions %}
+<h2>{{ question.question_text}}</h2>
+<ul>
+  {% for choice in question.choice_set.all %}
+  <li
+    style="
+      display: flex;
+      justify-content: space-between;
+      width: 320px;
+      margin-top: 1.5rem;
+    "
+  >
+    <p>{{choice.choice_text}}</p>
+    <p style="text-align: right">
+      <b> {{choice.votes}} vote{{choice.votes|pluralize }} </b>
+    </p>
   </li>
+  {% endfor %}
+</ul>
+<li>
+  <a style="margin-top: 3rem" href=" {% url 'polls:detail' question.id %}"
+    >Would you like to vote again?</a
+  >
+</li>
 {% endblock questions %}
