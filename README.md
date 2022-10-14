@@ -1,6 +1,24 @@
 # django-store
 
 A question application with django. It's my first project with Django and I was also following the Django tutorial.
+# Screenshots
+- questions
+
+
+<img src="./images/m3.png"/>
+
+
+- vote question
+
+
+<img src="./images/m2.png"/>
+
+- result question
+
+
+<img src="./images/m1.png"/>
+
+
 
 ## How to use the app 🧱
 
