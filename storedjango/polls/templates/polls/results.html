@@ -1,5 +1,5 @@
-{% extends './base.html' %} {% block title %}Results{% endblock title %} {%
-block questions %}
+{% extends './base.html' %} {% block title %}Results {% endblock title %} 
+{%block questions %}
 <h2>{{ question.question_text}}</h2>
 <ul>
   {% for choice in question.choice_set.all %}
